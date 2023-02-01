@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PFFprrrrPppXDD</title>
+</head>
+<style>
+    body {
+       background-color:rgb(70, 9, 82);
+       cursor: help;
+       
+   }
+   .dd {
+       text-align: center;
+       border: 5x solid black;
+   }
+   .ma {
+      background-color: rgb(70, 9, 82);
+       cursor: not-allowed;
+       border: none;
+       color:rgb(143, 9, 170);
+       
+   }
+   .but {
+    cursor: help;
+   }
+</style>
+</head>
+<body>
+<a href = "index.html"> <button class = "ma">im not ready</button></a>
+<video id="myVideo" width="1" height="400">
+   <source src="media/igfi.mp4" type="video/webm">
+</video>
+<br>
+<div class = "dd">
+<button class = "but" id="playButton">click if you want know the truth</button>
+</div>
+<script type="text/javascript">
+   var myVideo = document.getElementById('myVideo');
+   var playButton = document.getElementById('playButton');
+
+   playButton.addEventListener('click', function () {
+       if (myVideo.paused) {
+           if (myVideo.requestFullscreen) {
+               myVideo.requestFullscreen();
+           }
+           else if (myVideo.msRequestFullscreen) {
+               myVideo.msRequestFullscreen();
+           }
+           else if (myVideo.mozRequestFullScreen) {
+               myVideo.mozRequestFullScreen();
+           }
+           else if (myVideo.webkitRequestFullScreen) {
+               myVideo.webkitRequestFullScreen();
+           }
+           myVideo.play();
+       }
+       else {
+           myVideo.pause();
+       }
+   }, false);
+   </script>
+</body>
+
+
+</html>
